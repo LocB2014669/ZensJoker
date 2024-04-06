@@ -11,8 +11,8 @@ export const Header = () => {
         <div className="flex justify-end">
           <div className="flex items-center justify-center gap-x-3">
             <div className="flex flex-col justify-start items-end">
-              <span className="text-gray-400">Handicrafted by</span>
-              <span>Jim HLS</span>
+              <span className="text-gray-400 text-sm">Handicrafted by</span>
+              <span className="text-sm text-black">Jim HLS</span>
             </div>
             <div className="">
               <img
