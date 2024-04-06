@@ -24,3 +24,22 @@ const findMiniMaxSum2 = (arr) => {
   console.log(maxSum, miniSum);
 };
 findMiniMaxSum2(numbers);
+
+//calculate sums using four of the five integers in array:
+const calculateSums = (numbers) => {
+  const totalSum = numbers.reduce((number, sum) => number + sum, 0);
+  const query = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const sum = totalSum - numbers[i];
+    query.push(sum);
+  }
+
+  return query;
+};
+
+const result = calculateSums(numbers);
+
+result.forEach((item, index) => {
+  console.log(`${index + 1}: ${item}`);
+});
