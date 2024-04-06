@@ -43,13 +43,13 @@ export const MainHome = () => {
     }
   };
   return (
-    <div className="my-5 mx-auto px-[51px] max-w-4xl">
+    <div className="my-5 mx-auto lg:px-[51px] px-5 max-w-4xl ">
       {currentJokeIndex < jokes.length ? (
-        <div>
+        <div className="lg:mt-10 lg:mb-10 mt-10 mb-28">
           {jokes[currentJokeIndex].split("\n").map((line, index) => (
             <p
               key={index}
-              className="leading-6 my-2 text-black text-opacity-60 text-base"
+              className="lg:leading-7 lg:test-base text-sm  text-black text-opacity-70"
             >
               {line}
             </p>
@@ -60,11 +60,11 @@ export const MainHome = () => {
           That's all the jokes for today! Come back another day!
         </p>
       )}
-      <hr className="w-3/4 mx-auto" />
+      <hr className="w-3/4 mx-auto lg:block hidden" />
       <div className="text-white flex justify-center gap-x-5 items-center py-14">
         <div>
           <button
-            className="py-3 bg-blue-500 w-52 disabled:cursor-not-allowed"
+            className="bg-blue-500 lg:px-10 lg:py-3 px-5 py-1.5  lg:w-52 w-36  text-nowrap lg:text-lg text-sm "
             // disabled={currentJokeIndex === jokes.length}
             onClick={() => handleVote("Funny")}
           >
@@ -74,7 +74,7 @@ export const MainHome = () => {
         </div>
         <div>
           <button
-            className="py-3 bg-green-500 w-52 disabled:cursor-not-allowed"
+            className="bg-green-500 lg:px-10 lg:py-3 px-5 py-1.5  lg:w-52 w-36  text-nowrap lg:text-lg text-sm "
             // disabled={currentJokeIndex === jokes.length}
             onClick={() => handleVote("NotFunny")}
           >

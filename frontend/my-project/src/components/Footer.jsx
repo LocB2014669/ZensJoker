@@ -5,7 +5,7 @@ export const Footer = () => {
     <section className="border-t border-gray-300">
       <footer className="mx-auto py-7">
         <div className="flex flex-col gap-y-5 items-center justify-center">
-          <div className="leading-7 text-gray-400 text-center text-sm flex flex-col items-center">
+          <div className="lg:leading-6 leading-3 text-gray-400 text-center lg:text-sm text-[11px] flex flex-col items-baseline">
             <p className="max-w-3xl">
               This website is created as part of Hlsolutions program. The
               materials contained on this website are provided for general
