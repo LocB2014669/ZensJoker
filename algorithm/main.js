@@ -43,3 +43,28 @@ const result = calculateSums(numbers);
 result.forEach((item, index) => {
   console.log(`${index + 1}: ${item}`);
 });
+
+// Bouns:
+// + Count total of array
+const total = numbers.reduce((number, sum) => number + sum, 0);
+// + Find min in array
+// + Find max in array
+let minNumber = Infinity;
+let maxNumber = -Infinity;
+for (let i = 0; i <= numbers.length; i++) {
+  if (numbers[i] < minNumber) {
+    minNumber = numbers[i];
+  }
+  if (numbers[i] > maxNumber) {
+    maxNumber = numbers[i];
+  }
+}
+// const minNumber = Math.min(...numbers);
+// const maxNumber = Math.max(...numbers);
+// + Find even elements in array
+// + Find odd elements in array
+const evenNumber = numbers.filter((item) => item % 2 === 0);
+const oddNumber = numbers.filter((item) => item % 2 === 1);
+console.log(
+  `Total: ${total} | minNumber: ${minNumber} | maxNumber: ${maxNumber} | evenNumber: ${evenNumber} | oddNumber: ${oddNumber}`
+);
